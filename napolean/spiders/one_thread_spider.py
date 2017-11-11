@@ -11,8 +11,8 @@ from napolean.items import OneThreadItem
 class OneThreadSpider(Spider):
 	name = 'posts'
 	allowed_domans = ['tieba.baidu.com']
-	
 	start_urls = []
+	# start_urls = [l.strip() for l in open(thread_url_list_file_name, 'r', encoding='utf-8').readlines()]
 	
 	def __init__(self):
 		with open(thread_url_list_file_name, 'r', encoding='utf-8') as f:

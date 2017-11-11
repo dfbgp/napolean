@@ -33,7 +33,7 @@ class NapoleanPipeline(object):
 				buffer = ''
 				for one_url in thread_url_list:
 					if one_url.strip():
-						buffer += '{}\n'.format(one_url)
+						buffer += one_url
 				
 				f.write(buffer)
 				pass
@@ -41,8 +41,9 @@ class NapoleanPipeline(object):
 		elif isinstance(item, OneThreadItem):
 			with open(thread_text_file_name, 'a+', encoding='utf-8') as f:
 				text = item['thread_text']
-				
+				text = '{}\n'.format(text)
 				f.write(text)
+				print(text)
 				pass
 		else:
 			pass

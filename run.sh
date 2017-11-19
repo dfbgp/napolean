@@ -7,9 +7,11 @@
 #
 #. ./venv/bin/activate
 
+sudo apt-get -y install -y libxml2 libxml2-dev
+
 export PYTHONIOENCODING=UTF-8
 
-pip install -q -r requirements.txt
+pip install -r requirements.txt
 
 #clear
 rm -f page_url_list.txt

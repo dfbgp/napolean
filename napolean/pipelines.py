@@ -33,7 +33,7 @@ class NapoleanPipeline(object):
 				buffer = ''
 				for one_url in thread_url_list:
 					if one_url.strip():
-						buffer += one_url
+						buffer += '{}\n'.format(one_url)
 				
 				f.write(buffer)
 				pass
